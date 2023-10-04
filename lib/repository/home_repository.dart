@@ -16,4 +16,18 @@ class HomeRepository {
       throw Exception('Error: $e');
     }
   }
+
+  static Future getPostApi(String endPoint, Map<dynamic, dynamic>? body) async {
+    try {
+      final response = await ApiService.postApi(endPoint, body);
+
+      if (response.statusCode == 201) {
+        return response;
+      } else {
+        throw Exception('Failed to load data from the API');
+      }
+    } catch (e) {
+      throw Exception('Error: $e');
+    }
+  }
 }

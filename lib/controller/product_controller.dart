@@ -14,11 +14,27 @@ class ProductController extends GetxController {
   }
 
   Future<void> fetchData() async {
+    print("Enter into Get Data");
     try {
       final fetchedItems = await HomeRepository.getFetchApi(
           "api/v1/products.json?brand=maybelline");
       productsList.value = fetchedItems;
+      print("Data==>>${fetchedItems}");
     } catch (e) {
+      print("Error==>>${e}");
+      print('Error: $e');
+    }
+  }
+
+  Future<void> fetchPostData() async {
+    print("Enter into Get Data");
+    try {
+      final fetchedItems = await HomeRepository.getPostApi(
+          "/users", {"name": "morpheus", "job": "leader"});
+
+      print("Data==>>${fetchedItems}");
+    } catch (e) {
+      print("Error==>>${e}");
       print('Error: $e');
     }
   }

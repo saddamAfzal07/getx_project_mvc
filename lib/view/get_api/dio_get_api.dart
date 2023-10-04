@@ -26,7 +26,7 @@ class _HomePage2State extends State<HomePage2> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Welcom Guest",
+              "Welcome Guest",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
@@ -41,7 +41,7 @@ class _HomePage2State extends State<HomePage2> {
                     itemBuilder: (context, index) {
                       var product = controller.productList[index];
                       if (controller.isLoading.value) {
-                        print("Enter into if condition");
+                        print(" ");
                         return const ProductShimmer();
                       } else {
                         print("Enter into else");

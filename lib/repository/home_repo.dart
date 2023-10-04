@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
-import 'package:getx_api_project/constants/app_baseUrl.dart';
 import 'package:getx_api_project/model/product_model.dart';
 import 'package:getx_api_project/services/dio_Services.dart';
 
